@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gorails (0.1.2)
+    gorails (0.1.3)
       cli-kit (~> 4.0.0)
       cli-ui (~> 1.5.1)
 

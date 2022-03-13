@@ -1,4 +1,4 @@
-require 'gorails'
+require "gorails"
 
 module Gorails
   module Commands
@@ -8,9 +8,9 @@ module Gorails
         puts ""
 
         Gorails::Commands::Registry.resolved_commands.each do |name, klass|
-          next if name == 'help'
+          next if name == "help"
           puts CLI::UI.fmt("{{command:#{Gorails::TOOL_NAME} #{name}}}")
-          if help = klass.help
+          if (help = klass.help)
             puts CLI::UI.fmt(help)
           end
           puts ""

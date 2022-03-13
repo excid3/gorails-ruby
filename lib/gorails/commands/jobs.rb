@@ -1,4 +1,4 @@
-require 'gorails'
+require "gorails"
 require "net/http"
 require "json"
 
@@ -6,9 +6,9 @@ module Gorails
   module Commands
     class Jobs < Gorails::Command
       def call(_args, _name)
-        jobs = JSON.parse Net::HTTP.get(URI('https://jobs.gorails.com/jobs.json'))
+        jobs = JSON.parse Net::HTTP.get(URI("https://jobs.gorails.com/jobs.json"))
 
-        CLI::UI::Frame.open('Ruby on Rails jobs') do
+        CLI::UI::Frame.open("Ruby on Rails jobs") do
           jobs.each do |job|
             puts CLI::UI.fmt "{{green:#{job["title"]}}} at {{blue:#{job.dig("company", "name")}}}"
             puts job["url"]

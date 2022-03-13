@@ -1,12 +1,12 @@
-require 'gorails'
+require "gorails"
 require "net/http"
 require "json"
 
 module Gorails
   module Commands
     class Jumpstart < Gorails::Command
-      def call(_args, _name)
-        name = _args.first
+      def call(args, _name)
+        name = args.first
 
         if name.nil?
           puts CLI::UI.fmt "{{red:Application name is required.}}"

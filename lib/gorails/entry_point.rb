@@ -1,4 +1,4 @@
-require 'gorails'
+require "gorails"
 
 module Gorails
   module EntryPoint

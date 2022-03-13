@@ -1,4 +1,4 @@
-require 'gorails'
+require "gorails"
 require "net/http"
 require "json"
 
@@ -6,9 +6,9 @@ module Gorails
   module Commands
     class Episodes < Gorails::Command
       def call(_args, _name)
-        episodes = JSON.parse Net::HTTP.get(URI('https://gorails.com/episodes.json'))
+        episodes = JSON.parse Net::HTTP.get(URI("https://gorails.com/episodes.json"))
 
-        CLI::UI::Frame.open('Latest GoRails episodes') do
+        CLI::UI::Frame.open("Latest GoRails episodes") do
           episodes.each do |episode|
             puts CLI::UI.fmt "##{episode["number"]} {{green:#{episode["name"]}}}"
             puts episode["url"]

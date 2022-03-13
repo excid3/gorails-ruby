@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require_relative "gorails/version"
-require 'cli/ui'
-require 'cli/kit'
+require "cli/ui"
+require "cli/kit"
 
 CLI::UI::StdoutRouter.enable
 
@@ -11,14 +11,14 @@ module Gorails
 
   extend CLI::Kit::Autocall
 
-  TOOL_NAME = 'gorails'
-  ROOT      = File.expand_path('../..', __FILE__)
-  LOG_FILE  = '/tmp/myproject.log'
+  TOOL_NAME = "gorails"
+  ROOT = File.expand_path("../..", __FILE__)
+  LOG_FILE = "/tmp/myproject.log"
 
-  autoload(:EntryPoint, 'gorails/entry_point')
-  autoload(:Commands,   'gorails/commands')
+  autoload(:EntryPoint, "gorails/entry_point")
+  autoload(:Commands, "gorails/commands")
 
-  autocall(:Config)  { CLI::Kit::Config.new(tool_name: TOOL_NAME) }
+  autocall(:Config) { CLI::Kit::Config.new(tool_name: TOOL_NAME) }
   autocall(:Command) { CLI::Kit::BaseCommand }
 
   autocall(:Executor) { CLI::Kit::Executor.new(log_file: LOG_FILE) }

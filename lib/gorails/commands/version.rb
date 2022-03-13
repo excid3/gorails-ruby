@@ -2,9 +2,9 @@ require "gorails"
 
 module Gorails
   module Commands
-    class Example < Gorails::Command
+    class Version < Gorails::Command
       def call(_args, _name)
-        puts VERSION
+        puts Gorails::VERSION
       end
 
       def self.help

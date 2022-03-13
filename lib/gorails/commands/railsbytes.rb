@@ -1,5 +1,4 @@
 require "gorails"
-require "bundler"
 require "json"
 require "net/http"
 

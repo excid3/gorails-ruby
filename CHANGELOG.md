@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.1.4] - 2022-03-13
+
+- Add `version` command
+
 ## [0.1.3] - 2022-03-13
 
 - Vendor cli-kit and cli-ui for speed

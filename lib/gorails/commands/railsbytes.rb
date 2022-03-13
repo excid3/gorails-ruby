@@ -15,10 +15,10 @@ module Gorails
 
       def self.help
         <<~EOF
-        View the latest Railsbytes templates or load a template by ID.
-        Usage:
-          {{command:#{Gorails::TOOL_NAME} railsbytes}}
-          {{command:#{Gorails::TOOL_NAME} railsbytes x7msKX}}
+          View the latest Railsbytes templates or load a template by ID.
+          Usage:
+            {{command:#{Gorails::TOOL_NAME} railsbytes}}
+            {{command:#{Gorails::TOOL_NAME} railsbytes x7msKX}}
         EOF
       end
 
@@ -44,12 +44,12 @@ module Gorails
           puts
 
           CLI::UI::Prompt.ask("What would you like to do?") do |handler|
-            handler.option('View source')  do |selection|
+            handler.option("View source") do |selection|
               puts
               puts byte["script"]
             end
 
-            handler.option('Apply Railsbyte') do |selection|
+            handler.option("Apply Railsbyte") do |selection|
               puts
               puts "Running Railsbyte..."
 

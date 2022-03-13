@@ -42,6 +42,7 @@ To see a list of Railsbytes.com templates, you can run:
 
 ```sh
 gorails railsbytes
+gorails railsbytes x7msKX
 ```
 
 #### Jumpstart

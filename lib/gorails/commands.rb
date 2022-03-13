@@ -2,10 +2,7 @@ require "gorails"
 
 module Gorails
   module Commands
-    Registry = CLI::Kit::CommandRegistry.new(
-      default: "help",
-      contextual_resolver: nil
-    )
+    Registry = CLI::Kit::CommandRegistry.new(default: "help")
 
     def self.register(const, cmd, path)
       autoload(const, path)

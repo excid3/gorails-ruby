@@ -9,30 +9,21 @@ CLI::UI::StdoutRouter.enable
 module Gorails
   class Error < StandardError; end
 
-  extend CLI::Kit::Autocall
-
   TOOL_NAME = "gorails"
   ROOT = File.expand_path("../..", __FILE__)
-  LOG_FILE = "/tmp/myproject.log"
+  LOG_FILE = "/tmp/gorails.log"
 
   autoload(:EntryPoint, "gorails/entry_point")
   autoload(:Commands, "gorails/commands")
 
-  autocall(:Config) { CLI::Kit::Config.new(tool_name: TOOL_NAME) }
-  autocall(:Command) { CLI::Kit::BaseCommand }
+  Config = CLI::Kit::Config.new(tool_name: TOOL_NAME)
+  Command = CLI::Kit::BaseCommand
 
-  autocall(:Executor) { CLI::Kit::Executor.new(log_file: LOG_FILE) }
-  autocall(:Resolver) do
-    CLI::Kit::Resolver.new(
-      tool_name: TOOL_NAME,
-      command_registry: Gorails::Commands::Registry
-    )
-  end
+  Executor = CLI::Kit::Executor.new(log_file: LOG_FILE)
+  Resolver = CLI::Kit::Resolver.new(
+    tool_name: TOOL_NAME,
+    command_registry: Gorails::Commands::Registry
+  )
 
-  autocall(:ErrorHandler) do
-    CLI::Kit::ErrorHandler.new(
-      log_file: LOG_FILE,
-      exception_reporter: nil
-    )
-  end
+  ErrorHandler = CLI::Kit::ErrorHandler.new(log_file: LOG_FILE)
 end

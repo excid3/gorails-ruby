@@ -1,6 +1,7 @@
 require "gorails"
-require "net/http"
+require "bundler"
 require "json"
+require "net/http"
 
 module Gorails
   module Commands

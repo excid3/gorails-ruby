@@ -45,21 +45,20 @@ module Gorails
           puts
 
           CLI::UI::Prompt.ask("What would you like to do?") do |handler|
+            handler.option("Apply Railsbyte") do |selection|
+              puts
+              puts "Running Railsbyte..."
+              puts
+
+              system "rails app:template LOCATION=\"https://railsbytes.com/script/#{id}\""
+            end
+
             handler.option("View source") do |selection|
               puts
               puts byte["script"]
             end
 
-            handler.option("Apply Railsbyte") do |selection|
-              puts
-              puts "Running Railsbyte..."
-
-              Bundler.with_original_env do
-                system "rails app:template LOCATION=\"https://railsbytes.com/script/#{id}\""
-              end
-            end
-
-            handler.option("exit") { |selection| exit 0 }
+            handler.option("Exit") { |selection| exit 0 }
           end
         end
       end

@@ -1,0 +1,39 @@
+PATH
+  remote: .
+  specs:
+    gorails (0.1.0)
+      cli-kit (~> 4.0.0)
+      cli-ui (~> 1.5.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ansi (1.5.0)
+    builder (3.2.4)
+    cli-kit (4.0.0)
+      cli-ui (>= 1.1.4)
+    cli-ui (1.5.1)
+    metaclass (0.0.4)
+    minitest (5.15.0)
+    minitest-reporters (1.5.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    mocha (1.5.0)
+      metaclass (~> 0.0.1)
+    rake (13.0.6)
+    ruby-progressbar (1.11.0)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  gorails!
+  minitest (>= 5.0.0)
+  minitest-reporters
+  mocha (~> 1.5.0)
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.3.8

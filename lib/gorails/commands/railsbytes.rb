@@ -12,6 +12,7 @@ module Gorails
           bytes.each do |byte|
             puts CLI::UI.fmt "{{green:#{byte["name"]}}} by #{byte["created_by"]}"
             puts byte["short_description"]
+            puts "#{byte["id"]} - #{byte["url"]}"
             puts
           end
         end

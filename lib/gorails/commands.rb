@@ -13,9 +13,10 @@ module Gorails
     end
 
     register :Episodes, 'episodes', 'gorails/commands/episodes'
-    register :Railsbytes, 'railsbytes', 'gorails/commands/railsbytes'
     register :Jobs, 'jobs', 'gorails/commands/jobs'
-    register :Example, 'example', 'gorails/commands/example'
+    register :Jumpstart, 'jumpstart', 'gorails/commands/jumpstart'
+    register :Railsbytes, 'railsbytes', 'gorails/commands/railsbytes'
+    # register :Example, 'example', 'gorails/commands/example'
     register :Help,    'help',    'gorails/commands/help'
   end
 end

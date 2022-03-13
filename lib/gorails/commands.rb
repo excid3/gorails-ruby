@@ -13,7 +13,7 @@ module Gorails
     register :Jobs, "jobs", "gorails/commands/jobs"
     register :Jumpstart, "jumpstart", "gorails/commands/jumpstart"
     register :Railsbytes, "railsbytes", "gorails/commands/railsbytes"
-    # register :Example, 'example', 'gorails/commands/example'
+    register :Version, "version", "gorails/commands/version"
     register :Help, "help", "gorails/commands/help"
   end
 end

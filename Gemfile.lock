@@ -2,8 +2,6 @@ PATH
   remote: .
   specs:
     gorails (0.1.3)
-      cli-kit (~> 4.0.0)
-      cli-ui (~> 1.5.1)
 
 GEM
   remote: https://rubygems.org/
@@ -11,9 +9,6 @@ GEM
     ansi (1.5.0)
     ast (2.4.2)
     builder (3.2.4)
-    cli-kit (4.0.0)
-      cli-ui (>= 1.1.4)
-    cli-ui (1.5.1)
     metaclass (0.0.4)
     minitest (5.15.0)
     minitest-reporters (1.5.0)
